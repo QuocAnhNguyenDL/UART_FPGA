@@ -1,0 +1,122 @@
+|top_level
+CLOCK_50 => CLOCK_50.IN1
+Rx => Rx.IN1
+LEDR[0] <= uart_rx:rx.Rx_Byte
+LEDR[1] <= uart_rx:rx.Rx_Byte
+LEDR[2] <= uart_rx:rx.Rx_Byte
+LEDR[3] <= uart_rx:rx.Rx_Byte
+LEDR[4] <= uart_rx:rx.Rx_Byte
+LEDR[5] <= uart_rx:rx.Rx_Byte
+LEDR[6] <= uart_rx:rx.Rx_Byte
+LEDR[7] <= uart_rx:rx.Rx_Byte
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= Rx.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|my_pll:pll
+inclk0 => sub_wire3[0].IN1
+c0 <= altpll:altpll_component.clk
+
+
+|top_level|my_pll:pll|altpll:altpll_component
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <> <GND>
+clk[0] <= clk[0].DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= <GND>
+clk[2] <= <GND>
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+fref <= <GND>
+icdrclk <= <GND>
+
+
+|top_level|uart_rx:rx
+clk => buffer[0].CLK
+clk => buffer[1].CLK
+clk => buffer[2].CLK
+clk => buffer[3].CLK
+clk => buffer[4].CLK
+clk => buffer[5].CLK
+clk => buffer[6].CLK
+clk => buffer[7].CLK
+clk => clk_count[0].CLK
+clk => clk_count[1].CLK
+clk => clk_count[2].CLK
+clk => clk_count[3].CLK
+clk => clk_count[4].CLK
+clk => clk_count[5].CLK
+clk => clk_count[6].CLK
+clk => bit_index[0].CLK
+clk => bit_index[1].CLK
+clk => bit_index[2].CLK
+clk => Rx_Data.CLK
+clk => Rx_Data_R.CLK
+clk => state~1.DATAIN
+Rx_Serial => Rx_Data_R.DATAIN
+Rx_Byte[0] <= buffer[0].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[1] <= buffer[1].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[2] <= buffer[2].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[3] <= buffer[3].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[4] <= buffer[4].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[5] <= buffer[5].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[6] <= buffer[6].DB_MAX_OUTPUT_PORT_TYPE
+Rx_Byte[7] <= buffer[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

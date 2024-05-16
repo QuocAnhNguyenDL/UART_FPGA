@@ -1,0 +1,8 @@
+
+State Machine - |top_level|uart_rx:rx|state
+Name state.STOP state.R_DATA state.START state.IDLE state.CLEAN 
+state.IDLE 0 0 0 0 0 
+state.START 0 0 1 1 0 
+state.R_DATA 0 1 0 1 0 
+state.STOP 1 0 0 1 0 
+state.CLEAN 0 0 0 1 1 
