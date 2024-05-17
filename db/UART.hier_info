@@ -1,6 +1,7 @@
 |top_level
 CLOCK_50 => CLOCK_50.IN1
 Rx => Rx.IN1
+Tx <= uart_tx:tx.Tx_Serial
 LEDR[0] <= uart_rx:rx.Rx_Byte
 LEDR[1] <= uart_rx:rx.Rx_Byte
 LEDR[2] <= uart_rx:rx.Rx_Byte
@@ -18,7 +19,29 @@ LEDR[13] <= <GND>
 LEDR[14] <= <GND>
 LEDR[15] <= <GND>
 LEDR[16] <= <GND>
-LEDR[17] <= Rx.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[17] <= <GND>
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+KEY[0] => KEY[0].IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
 
 
 |top_level|my_pll:pll
@@ -118,5 +141,32 @@ Rx_Byte[4] <= buffer[4].DB_MAX_OUTPUT_PORT_TYPE
 Rx_Byte[5] <= buffer[5].DB_MAX_OUTPUT_PORT_TYPE
 Rx_Byte[6] <= buffer[6].DB_MAX_OUTPUT_PORT_TYPE
 Rx_Byte[7] <= buffer[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|uart_tx:tx
+clk => Tx_Data.CLK
+clk => clk_count[0].CLK
+clk => clk_count[1].CLK
+clk => clk_count[2].CLK
+clk => clk_count[3].CLK
+clk => clk_count[4].CLK
+clk => clk_count[5].CLK
+clk => clk_count[6].CLK
+clk => bit_index[0].CLK
+clk => bit_index[1].CLK
+clk => bit_index[2].CLK
+clk => send_latch.CLK
+clk => state~1.DATAIN
+Tx_Serial <= Tx_Data.DB_MAX_OUTPUT_PORT_TYPE
+send => send_latch.DATAIN
+send => always1.IN1
+Tx_Byte[0] => Mux0.IN7
+Tx_Byte[1] => Mux0.IN6
+Tx_Byte[2] => Mux0.IN5
+Tx_Byte[3] => Mux0.IN4
+Tx_Byte[4] => Mux0.IN3
+Tx_Byte[5] => Mux0.IN2
+Tx_Byte[6] => Mux0.IN1
+Tx_Byte[7] => Mux0.IN0
 
 

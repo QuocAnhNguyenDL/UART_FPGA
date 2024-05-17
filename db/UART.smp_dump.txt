@@ -1,4 +1,11 @@
 
+State Machine - |top_level|uart_tx:tx|state
+Name state.T_DATA state.000 state.CLEAN state.STOP 
+state.000 0 0 0 0 
+state.T_DATA 1 1 0 0 
+state.STOP 0 1 0 1 
+state.CLEAN 0 1 1 0 
+
 State Machine - |top_level|uart_rx:rx|state
 Name state.STOP state.R_DATA state.START state.IDLE state.CLEAN 
 state.IDLE 0 0 0 0 0 

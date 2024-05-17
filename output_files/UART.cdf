@@ -3,8 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
-	P ActionCode(Ign)
-		Device PartName(EP2C35F672) MfrSpec(OpMask(0) FullPath("D:/UART/Quartus/output_files/UART.sof"));
+	P ActionCode(Cfg)
+		Device PartName(EP2C35F672) Path("D:/UART/Quartus/output_files/") File("UART.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

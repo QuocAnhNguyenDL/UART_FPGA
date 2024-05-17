@@ -1,15 +1,15 @@
 module uart_rx
 (
-	input clk,
-	input Rx_Serial,
+	input 		 clk,
+	input 		 Rx_Serial,
 	output [7:0] Rx_Byte
 );
 
-localparam IDLE = 3'b000;
-localparam START = 3'b0001;
-localparam R_DATA = 3'b010;
-localparam STOP = 3'b011;
-localparam CLEAN = 3'b100;
+localparam IDLE	 	= 3'b000;
+localparam START 		= 3'b001;
+localparam R_DATA 	= 3'b010;
+localparam STOP 		= 3'b011;
+localparam CLEAN		= 3'b100;
 
 parameter CLKS_PER_BIT = 87 ; //clk = 10 Mhz , baudrate = 115200
 

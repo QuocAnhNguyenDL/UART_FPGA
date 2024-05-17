@@ -1,5 +1,5 @@
 Fitter report for UART
-Thu May 16 16:12:25 2024
+Fri May 17 11:36:47 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -65,18 +65,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu May 16 16:12:25 2024           ;
+; Fitter Status                      ; Successful - Fri May 17 11:36:47 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; UART                                            ;
 ; Top-level Entity Name              ; top_level                                       ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 52 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 52 / 33,216 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 25 / 33,216 ( < 1 % )                           ;
-; Total registers                    ; 25                                              ;
-; Total pins                         ; 20 / 475 ( 4 % )                                ;
+; Total logic elements               ; 84 / 33,216 ( < 1 % )                           ;
+;     Total combinational functions  ; 84 / 33,216 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 41 / 33,216 ( < 1 % )                           ;
+; Total registers                    ; 41                                              ;
+; Total pins                         ; 43 / 475 ( 9 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -143,12 +143,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processors 2-4         ;  33.3%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -391,10 +391,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; I2C_SDAT      ; PIN_B6        ; QSF Assignment ;
 ; Location ;                ;              ; IRDA_RXD      ; PIN_AE25      ; QSF Assignment ;
 ; Location ;                ;              ; IRDA_TXD      ; PIN_AE24      ; QSF Assignment ;
-; Location ;                ;              ; KEY[0]        ; PIN_G26       ; QSF Assignment ;
-; Location ;                ;              ; KEY[1]        ; PIN_N23       ; QSF Assignment ;
-; Location ;                ;              ; KEY[2]        ; PIN_P23       ; QSF Assignment ;
-; Location ;                ;              ; KEY[3]        ; PIN_W26       ; QSF Assignment ;
 ; Location ;                ;              ; LCD_BLON      ; PIN_K2        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[0]   ; PIN_J1        ; QSF Assignment ;
 ; Location ;                ;              ; LCD_DATA[1]   ; PIN_J2        ; QSF Assignment ;
@@ -492,24 +488,6 @@ applicable agreement for further details.
 ; Location ;                ;              ; SRAM_OE_N     ; PIN_AD10      ; QSF Assignment ;
 ; Location ;                ;              ; SRAM_UB_N     ; PIN_AF9       ; QSF Assignment ;
 ; Location ;                ;              ; SRAM_WE_N     ; PIN_AE10      ; QSF Assignment ;
-; Location ;                ;              ; SW[0]         ; PIN_N25       ; QSF Assignment ;
-; Location ;                ;              ; SW[10]        ; PIN_N1        ; QSF Assignment ;
-; Location ;                ;              ; SW[11]        ; PIN_P1        ; QSF Assignment ;
-; Location ;                ;              ; SW[12]        ; PIN_P2        ; QSF Assignment ;
-; Location ;                ;              ; SW[13]        ; PIN_T7        ; QSF Assignment ;
-; Location ;                ;              ; SW[14]        ; PIN_U3        ; QSF Assignment ;
-; Location ;                ;              ; SW[15]        ; PIN_U4        ; QSF Assignment ;
-; Location ;                ;              ; SW[16]        ; PIN_V1        ; QSF Assignment ;
-; Location ;                ;              ; SW[17]        ; PIN_V2        ; QSF Assignment ;
-; Location ;                ;              ; SW[1]         ; PIN_N26       ; QSF Assignment ;
-; Location ;                ;              ; SW[2]         ; PIN_P25       ; QSF Assignment ;
-; Location ;                ;              ; SW[3]         ; PIN_AE14      ; QSF Assignment ;
-; Location ;                ;              ; SW[4]         ; PIN_AF14      ; QSF Assignment ;
-; Location ;                ;              ; SW[5]         ; PIN_AD13      ; QSF Assignment ;
-; Location ;                ;              ; SW[6]         ; PIN_AC13      ; QSF Assignment ;
-; Location ;                ;              ; SW[7]         ; PIN_C13       ; QSF Assignment ;
-; Location ;                ;              ; SW[8]         ; PIN_B13       ; QSF Assignment ;
-; Location ;                ;              ; SW[9]         ; PIN_A13       ; QSF Assignment ;
 ; Location ;                ;              ; TCK           ; PIN_D14       ; QSF Assignment ;
 ; Location ;                ;              ; TCS           ; PIN_A14       ; QSF Assignment ;
 ; Location ;                ;              ; TDI           ; PIN_B14       ; QSF Assignment ;
@@ -571,8 +549,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 103 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 103 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 174 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 174 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -595,7 +573,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 98      ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 169     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 5       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -611,29 +589,29 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 52 / 33,216 ( < 1 % ) ;
-;     -- Combinational with no register       ; 27                    ;
+; Total logic elements                        ; 84 / 33,216 ( < 1 % ) ;
+;     -- Combinational with no register       ; 43                    ;
 ;     -- Register only                        ; 0                     ;
-;     -- Combinational with a register        ; 25                    ;
+;     -- Combinational with a register        ; 41                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 31                    ;
-;     -- 3 input functions                    ; 12                    ;
-;     -- <=2 input functions                  ; 9                     ;
+;     -- 4 input functions                    ; 45                    ;
+;     -- 3 input functions                    ; 19                    ;
+;     -- <=2 input functions                  ; 20                    ;
 ;     -- Register only                        ; 0                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 46                    ;
-;     -- arithmetic mode                      ; 6                     ;
+;     -- normal mode                          ; 72                    ;
+;     -- arithmetic mode                      ; 12                    ;
 ;                                             ;                       ;
-; Total registers*                            ; 25 / 34,593 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 25 / 33,216 ( < 1 % ) ;
+; Total registers*                            ; 41 / 34,593 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 41 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )     ;
 ;                                             ;                       ;
-; Total LABs:  partially or completely used   ; 4 / 2,076 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 8 / 2,076 ( < 1 % )   ;
 ; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 20 / 475 ( 4 % )      ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )        ;
+; I/O pins                                    ; 43 / 475 ( 9 % )      ;
+;     -- Clock pins                           ; 8 / 8 ( 100 % )       ;
 ;                                             ;                       ;
 ; Global signals                              ; 1                     ;
 ; M4Ks                                        ; 0 / 105 ( 0 % )       ;
@@ -647,10 +625,10 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 25                    ;
-; Highest non-global fan-out                  ; 14                    ;
-; Total fan-out                               ; 251                   ;
-; Average fan-out                             ; 2.46                  ;
+; Maximum fan-out                             ; 41                    ;
+; Highest non-global fan-out                  ; 13                    ;
+; Total fan-out                               ; 395                   ;
+; Average fan-out                             ; 2.28                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -663,28 +641,28 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 +---------------------------------------------+----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                            ;
 ;                                             ;                      ;                                ;
-; Total logic elements                        ; 52 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 27                   ; 0                              ;
+; Total logic elements                        ; 84 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 43                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
-;     -- Combinational with a register        ; 25                   ; 0                              ;
+;     -- Combinational with a register        ; 41                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                                ;
-;     -- 4 input functions                    ; 31                   ; 0                              ;
-;     -- 3 input functions                    ; 12                   ; 0                              ;
-;     -- <=2 input functions                  ; 9                    ; 0                              ;
+;     -- 4 input functions                    ; 45                   ; 0                              ;
+;     -- 3 input functions                    ; 19                   ; 0                              ;
+;     -- <=2 input functions                  ; 20                   ; 0                              ;
 ;     -- Register only                        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Logic elements by mode                      ;                      ;                                ;
-;     -- normal mode                          ; 46                   ; 0                              ;
-;     -- arithmetic mode                      ; 6                    ; 0                              ;
+;     -- normal mode                          ; 72                   ; 0                              ;
+;     -- arithmetic mode                      ; 12                   ; 0                              ;
 ;                                             ;                      ;                                ;
-; Total registers                             ; 25                   ; 0                              ;
-;     -- Dedicated logic registers            ; 25 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
+; Total registers                             ; 41                   ; 0                              ;
+;     -- Dedicated logic registers            ; 41 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                      ;                                ;
-; Total LABs:  partially or completely used   ; 4 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 8 / 2076 ( < 1 % )   ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                      ;                                ;
 ; Virtual pins                                ; 0                    ; 0                              ;
-; I/O pins                                    ; 20                   ; 0                              ;
+; I/O pins                                    ; 43                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )       ; 0 / 70 ( 0 % )                 ;
 ; Total memory bits                           ; 0                    ; 0                              ;
 ; Total RAM block bits                        ; 0                    ; 0                              ;
@@ -692,22 +670,22 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; Clock control block                         ; 0 / 20 ( 0 % )       ; 1 / 20 ( 5 % )                 ;
 ;                                             ;                      ;                                ;
 ; Connections                                 ;                      ;                                ;
-;     -- Input Connections                    ; 25                   ; 1                              ;
-;     -- Registered Input Connections         ; 25                   ; 0                              ;
-;     -- Output Connections                   ; 1                    ; 25                             ;
+;     -- Input Connections                    ; 41                   ; 1                              ;
+;     -- Registered Input Connections         ; 41                   ; 0                              ;
+;     -- Output Connections                   ; 1                    ; 41                             ;
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 250                  ; 27                             ;
-;     -- Registered Connections               ; 143                  ; 0                              ;
+;     -- Total Connections                    ; 394                  ; 43                             ;
+;     -- Registered Connections               ; 234                  ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
-;     -- Top                                  ; 0                    ; 26                             ;
-;     -- hard_block:auto_generated_inst       ; 26                   ; 0                              ;
+;     -- Top                                  ; 0                    ; 42                             ;
+;     -- hard_block:auto_generated_inst       ; 42                   ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Partition Interface                         ;                      ;                                ;
-;     -- Input Ports                          ; 2                    ; 1                              ;
-;     -- Output Ports                         ; 18                   ; 1                              ;
+;     -- Input Ports                          ; 24                   ; 1                              ;
+;     -- Output Ports                         ; 19                   ; 1                              ;
 ;     -- Bidir Ports                          ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Registered Ports                            ;                      ;                                ;
@@ -732,7 +710,29 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; CLOCK_50 ; N2    ; 2        ; 0            ; 18           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; Rx       ; K25   ; 5        ; 65           ; 22           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; KEY[0]   ; G26   ; 5        ; 65           ; 27           ; 1           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; KEY[1]   ; N23   ; 5        ; 65           ; 20           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; KEY[2]   ; P23   ; 6        ; 65           ; 18           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; KEY[3]   ; W26   ; 6        ; 65           ; 10           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; Rx       ; K25   ; 5        ; 65           ; 22           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[0]    ; N25   ; 5        ; 65           ; 19           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[10]   ; N1    ; 2        ; 0            ; 18           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[11]   ; P1    ; 1        ; 0            ; 18           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[12]   ; P2    ; 1        ; 0            ; 18           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[13]   ; T7    ; 1        ; 0            ; 11           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[14]   ; U3    ; 1        ; 0            ; 12           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[15]   ; U4    ; 1        ; 0            ; 12           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[16]   ; V1    ; 1        ; 0            ; 12           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[17]   ; V2    ; 1        ; 0            ; 12           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[1]    ; N26   ; 5        ; 65           ; 19           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[2]    ; P25   ; 6        ; 65           ; 19           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[3]    ; AE14  ; 7        ; 33           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[4]    ; AF14  ; 7        ; 33           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[5]    ; AD13  ; 8        ; 33           ; 0            ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[6]    ; AC13  ; 8        ; 33           ; 0            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[7]    ; C13   ; 3        ; 31           ; 36           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[8]    ; B13   ; 4        ; 31           ; 36           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[9]    ; A13   ; 4        ; 31           ; 36           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -759,6 +759,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; LEDR[7]  ; AC21  ; 7        ; 61           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; LEDR[8]  ; AA14  ; 7        ; 37           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; LEDR[9]  ; Y13   ; 7        ; 37           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; Tx       ; K26   ; 5        ; 65           ; 22           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -767,14 +768,14 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 0 / 64 ( 0 % )   ; 3.3V          ; --           ;
-; 2        ; 3 / 59 ( 5 % )   ; 3.3V          ; --           ;
-; 3        ; 0 / 56 ( 0 % )   ; 3.3V          ; --           ;
-; 4        ; 0 / 58 ( 0 % )   ; 3.3V          ; --           ;
-; 5        ; 1 / 65 ( 2 % )   ; 3.3V          ; --           ;
-; 6        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
-; 7        ; 14 / 58 ( 24 % ) ; 3.3V          ; --           ;
-; 8        ; 4 / 56 ( 7 % )   ; 3.3V          ; --           ;
+; 1        ; 7 / 64 ( 11 % )  ; 3.3V          ; --           ;
+; 2        ; 4 / 59 ( 7 % )   ; 3.3V          ; --           ;
+; 3        ; 1 / 56 ( 2 % )   ; 3.3V          ; --           ;
+; 4        ; 2 / 58 ( 3 % )   ; 3.3V          ; --           ;
+; 5        ; 6 / 65 ( 9 % )   ; 3.3V          ; --           ;
+; 6        ; 4 / 59 ( 7 % )   ; 3.3V          ; --           ;
+; 7        ; 16 / 58 ( 28 % ) ; 3.3V          ; --           ;
+; 8        ; 6 / 56 ( 11 % )  ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -794,7 +795,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; A10      ; 447        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A12      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; A13      ; 430        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; A13      ; 430        ; 4        ; SW[9]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; A14      ; 427        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A15      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -871,7 +872,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; AC10     ; 164        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC11     ; 168        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC12     ; 172        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AC13     ; 185        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AC13     ; 185        ; 8        ; SW[6]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC14     ; 191        ; 7        ; LEDR[11]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC15     ; 199        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC16     ; 202        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -897,7 +898,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; AD10     ; 167        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD11     ; 173        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD12     ; 181        ; 8        ; LEDR[17]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AD13     ; 186        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AD13     ; 186        ; 8        ; SW[5]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD15     ; 190        ; 7        ; LEDR[12]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD16     ; 201        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -924,7 +925,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; AE11     ; 174        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE12     ; 182        ; 8        ; LEDR[16]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE13     ; 183        ; 8        ; LEDR[15]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AE14     ; 188        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AE14     ; 188        ; 7        ; SW[3]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE15     ; 189        ; 7        ; LEDR[13]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE16     ; 200        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE17     ; 206        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -949,7 +950,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; AF11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF12     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF13     ; 184        ; 8        ; LEDR[14]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AF14     ; 187        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AF14     ; 187        ; 7        ; SW[4]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF17     ; 205        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -973,7 +974,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; B10      ; 448        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 435        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B12      ; 433        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B13      ; 429        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; B13      ; 429        ; 4        ; SW[8]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; B14      ; 428        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B15      ; 420        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B16      ; 419        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -999,7 +1000,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; C10      ; 450        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ; 436        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C12      ; 434        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C13      ; 431        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; C13      ; 431        ; 3        ; SW[7]                                    ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; C14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C15      ; 421        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C16      ; 418        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1116,7 +1117,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; G23      ; 346        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G24      ; 345        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G25      ; 343        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G26      ; 342        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G26      ; 342        ; 5        ; KEY[0]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; H1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H2       ; 36         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H3       ; 32         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1194,7 +1195,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; K23      ; 331        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K24      ; 330        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K25      ; 321        ; 5        ; Rx                                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; K26      ; 320        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K26      ; 320        ; 5        ; Tx                                       ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; L2       ; 50         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L3       ; 51         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1247,7 +1248,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; M24      ; 313        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M25      ; 312        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N1       ; 65         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; N1       ; 65         ; 2        ; SW[10]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N2       ; 64         ; 2        ; CLOCK_50                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N3       ; 62         ; 2        ; ^DATA0                                   ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; N4       ; 63         ; 2        ; ^nCE                                     ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1269,12 +1270,12 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; N20      ; 315        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N21      ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N22      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; N23      ; 311        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N23      ; 311        ; 5        ; KEY[1]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N24      ; 310        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N25      ; 309        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; N26      ; 308        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P1       ; 68         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; P2       ; 67         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; N25      ; 309        ; 5        ; SW[0]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; N26      ; 308        ; 5        ; SW[1]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; P1       ; 68         ; 1        ; SW[11]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; P2       ; 67         ; 1        ; SW[12]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P3       ; 69         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P4       ; 70         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1295,9 +1296,9 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; P20      ; 301        ; 6        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P21      ; 300        ; 6        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; P23      ; 305        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P23      ; 305        ; 6        ; KEY[2]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P24      ; 304        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P25      ; 307        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; P25      ; 307        ; 6        ; SW[2]                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P26      ; 306        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R2       ; 71         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1331,7 +1332,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; T4       ; 83         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T6       ; 93         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T7       ; 92         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T7       ; 92         ; 1        ; SW[13]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; T8       ; 111        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T9       ; 76         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T10      ; 75         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1353,8 +1354,8 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; T26      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; U1       ; 85         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U2       ; 84         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U3       ; 88         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U4       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U3       ; 88         ; 1        ; SW[14]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; U4       ; 89         ; 1        ; SW[15]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; U5       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U6       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1377,8 +1378,8 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; U24      ; 283        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U25      ; 285        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U26      ; 286        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V1       ; 90         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V2       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V1       ; 90         ; 1        ; SW[16]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; V2       ; 91         ; 1        ; SW[17]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; V3       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V4       ; 94         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V5       ; 104        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1428,7 +1429,7 @@ The pin-out file can be found in D:/UART/Quartus/output_files/UART.pin.
 ; W23      ; 272        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W24      ; 271        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 273        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W26      ; 274        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W26      ; 274        ; 6        ; KEY[3]                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; Y1       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1543,10 +1544,11 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                           ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+--------------+
-; |top_level                      ; 52 (0)      ; 25 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 20   ; 0            ; 27 (0)       ; 0 (0)             ; 25 (0)           ; |top_level                                    ; work         ;
+; |top_level                      ; 84 (0)      ; 41 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 43   ; 0            ; 43 (0)       ; 0 (0)             ; 41 (0)           ; |top_level                                    ; work         ;
 ;    |my_pll:pll|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_level|my_pll:pll                         ; work         ;
 ;       |altpll:altpll_component| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_level|my_pll:pll|altpll:altpll_component ; work         ;
-;    |uart_rx:rx|                 ; 52 (52)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 25 (25)          ; |top_level|uart_rx:rx                         ; work         ;
+;    |uart_rx:rx|                 ; 47 (47)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 25 (25)          ; |top_level|uart_rx:rx                         ; work         ;
+;    |uart_tx:tx|                 ; 37 (37)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 21 (21)      ; 0 (0)             ; 16 (16)          ; |top_level|uart_tx:tx                         ; work         ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1556,6 +1558,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------------+---------------+-----------------------+-----+
 ; Name     ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ;
 +----------+----------+---------------+---------------+-----------------------+-----+
+; Tx       ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[0]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[1]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[2]  ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1574,33 +1577,82 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[15] ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[16] ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDR[17] ; Output   ; --            ; --            ; --                    ; --  ;
-; Rx       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; SW[8]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[9]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[10]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[11]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[12]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[13]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[14]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[15]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[16]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[17]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[1]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[2]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[3]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; KEY[0]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
+; SW[6]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[5]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[4]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[7]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
+; SW[2]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[1]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[0]    ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; SW[3]    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; CLOCK_50 ; Input    ; --            ; --            ; --                    ; --  ;
+; Rx       ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 +----------+----------+---------------+---------------+-----------------------+-----+
 
 
-+-------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                              ;
-+-------------------------------+-------------------+---------+
-; Source Pin / Fanout           ; Pad To Core Index ; Setting ;
-+-------------------------------+-------------------+---------+
-; Rx                            ;                   ;         ;
-;      - uart_rx:rx|Rx_Data_R~0 ; 0                 ; 6       ;
-;      - LEDR[17]               ; 0                 ; 6       ;
-; CLOCK_50                      ;                   ;         ;
-+-------------------------------+-------------------+---------+
++--------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                               ;
++--------------------------------+-------------------+---------+
+; Source Pin / Fanout            ; Pad To Core Index ; Setting ;
++--------------------------------+-------------------+---------+
+; SW[8]                          ;                   ;         ;
+; SW[9]                          ;                   ;         ;
+; SW[10]                         ;                   ;         ;
+; SW[11]                         ;                   ;         ;
+; SW[12]                         ;                   ;         ;
+; SW[13]                         ;                   ;         ;
+; SW[14]                         ;                   ;         ;
+; SW[15]                         ;                   ;         ;
+; SW[16]                         ;                   ;         ;
+; SW[17]                         ;                   ;         ;
+; KEY[1]                         ;                   ;         ;
+; KEY[2]                         ;                   ;         ;
+; KEY[3]                         ;                   ;         ;
+; KEY[0]                         ;                   ;         ;
+;      - uart_tx:tx|send_latch   ; 0                 ; 6       ;
+;      - uart_tx:tx|Selector11~0 ; 0                 ; 6       ;
+;      - uart_tx:tx|Selector12~0 ; 0                 ; 6       ;
+;      - uart_tx:tx|Selector11~1 ; 0                 ; 6       ;
+; SW[6]                          ;                   ;         ;
+; SW[5]                          ;                   ;         ;
+; SW[4]                          ;                   ;         ;
+; SW[7]                          ;                   ;         ;
+; SW[2]                          ;                   ;         ;
+; SW[1]                          ;                   ;         ;
+; SW[0]                          ;                   ;         ;
+; SW[3]                          ;                   ;         ;
+; CLOCK_50                       ;                   ;         ;
+; Rx                             ;                   ;         ;
+;      - uart_rx:rx|Rx_Data_R~0  ; 0                 ; 6       ;
++--------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                      ;
-+------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                     ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                 ; PIN_N2            ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; my_pll:pll|altpll:altpll_component|_clk0 ; PLL_1             ; 25      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; uart_rx:rx|clk_count[0]~18               ; LCCOMB_X60_Y1_N30 ; 7       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; uart_rx:rx|clk_count[0]~19               ; LCCOMB_X59_Y1_N8  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                       ;
++------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                     ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                                 ; PIN_N2             ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; my_pll:pll|altpll:altpll_component|_clk0 ; PLL_1              ; 41      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; uart_rx:rx|clk_count[0]~22               ; LCCOMB_X61_Y3_N26  ; 7       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; uart_rx:rx|clk_count[0]~23               ; LCCOMB_X61_Y3_N24  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; uart_tx:tx|clk_count[6]~11               ; LCCOMB_X36_Y22_N24 ; 7       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; uart_tx:tx|state.CLEAN                   ; LCFF_X37_Y22_N7    ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
++------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------+
@@ -1608,7 +1660,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
 ; Name                                     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; my_pll:pll|altpll:altpll_component|_clk0 ; PLL_1    ; 25      ; Global Clock         ; GCLK3            ; --                        ;
+; my_pll:pll|altpll:altpll_component|_clk0 ; PLL_1    ; 41      ; Global Clock         ; GCLK3            ; --                        ;
 +------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1617,35 +1669,47 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+---------+
 ; Name                       ; Fan-Out ;
 +----------------------------+---------+
-; uart_rx:rx|bit_index[0]    ; 14      ;
+; uart_rx:rx|bit_index[0]    ; 13      ;
 ; uart_rx:rx|Rx_Data         ; 12      ;
-; uart_rx:rx|state.R_DATA    ; 12      ;
-; uart_rx:rx|LessThan0~3     ; 11      ;
-; uart_rx:rx|LessThan0~2     ; 10      ;
-; uart_rx:rx|clk_count[6]    ; 10      ;
-; uart_rx:rx|bit_index[1]    ; 9       ;
-; uart_rx:rx|clk_count[0]~19 ; 8       ;
-; uart_rx:rx|bit_index[2]    ; 8       ;
-; uart_rx:rx|clk_count[0]~18 ; 7       ;
-; uart_rx:rx|Selector2~3     ; 6       ;
+; uart_rx:rx|bit_index[1]    ; 12      ;
+; uart_tx:tx|state.CLEAN     ; 12      ;
+; uart_rx:rx|bit_index[2]    ; 11      ;
+; uart_rx:rx|Decoder0~1      ; 9       ;
+; uart_tx:tx|bit_index[0]    ; 9       ;
+; uart_tx:tx|bit_index[1]    ; 9       ;
+; uart_rx:rx|clk_count[0]~23 ; 8       ;
+; uart_rx:rx|state.R_DATA    ; 8       ;
+; uart_tx:tx|LessThan0~1     ; 8       ;
+; uart_tx:tx|state.T_DATA    ; 8       ;
+; uart_rx:rx|clk_count[0]~22 ; 7       ;
+; uart_rx:rx|Selector2~0     ; 7       ;
+; uart_tx:tx|clk_count[6]~11 ; 7       ;
 ; uart_rx:rx|state.IDLE      ; 6       ;
+; uart_tx:tx|bit_index[2]    ; 6       ;
+; uart_tx:tx|state.STOP      ; 6       ;
 ; uart_rx:rx|clk_count[5]    ; 6       ;
+; uart_rx:rx|clk_count[6]    ; 5       ;
+; uart_tx:tx|clk_count[5]    ; 5       ;
+; KEY[0]                     ; 4       ;
 ; uart_rx:rx|state.START     ; 4       ;
+; uart_tx:tx|state.000       ; 4       ;
 ; uart_rx:rx|clk_count[4]    ; 4       ;
-; uart_rx:rx|Equal0~0        ; 3       ;
+; uart_tx:tx|clk_count[6]    ; 4       ;
+; uart_tx:tx|clk_count[4]    ; 4       ;
 ; uart_rx:rx|state.STOP      ; 3       ;
+; uart_rx:rx|Equal0~0        ; 3       ;
+; uart_tx:tx|LessThan0~0     ; 3       ;
+; uart_tx:tx|send_latch      ; 3       ;
 ; uart_rx:rx|clk_count[0]    ; 3       ;
 ; uart_rx:rx|clk_count[3]    ; 3       ;
 ; uart_rx:rx|clk_count[2]    ; 3       ;
 ; uart_rx:rx|clk_count[1]    ; 3       ;
-; Rx                         ; 2       ;
-; uart_rx:rx|Decoder0~12     ; 2       ;
 ; uart_rx:rx|Equal0~2        ; 2       ;
 ; uart_rx:rx|Equal0~1        ; 2       ;
+; uart_tx:tx|state.STOP~1    ; 2       ;
 ; uart_rx:rx|Decoder0~9      ; 2       ;
-; uart_rx:rx|Decoder0~6      ; 2       ;
-; uart_rx:rx|Decoder0~3      ; 2       ;
-; uart_rx:rx|Decoder0~0      ; 2       ;
+; uart_rx:rx|LessThan0~0     ; 2       ;
+; uart_tx:tx|state~7         ; 2       ;
 ; uart_rx:rx|buffer[7]       ; 2       ;
 ; uart_rx:rx|buffer[6]       ; 2       ;
 ; uart_rx:rx|buffer[5]       ; 2       ;
@@ -1654,44 +1718,81 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart_rx:rx|buffer[2]       ; 2       ;
 ; uart_rx:rx|buffer[1]       ; 2       ;
 ; uart_rx:rx|buffer[0]       ; 2       ;
+; uart_tx:tx|Tx_Data         ; 2       ;
+; uart_tx:tx|clk_count[3]    ; 2       ;
+; uart_tx:tx|clk_count[2]    ; 2       ;
+; uart_tx:tx|clk_count[1]    ; 2       ;
+; Rx                         ; 1       ;
 ; CLOCK_50                   ; 1       ;
+; SW[3]                      ; 1       ;
+; SW[0]                      ; 1       ;
+; SW[1]                      ; 1       ;
+; SW[2]                      ; 1       ;
+; SW[7]                      ; 1       ;
+; SW[4]                      ; 1       ;
+; SW[5]                      ; 1       ;
+; SW[6]                      ; 1       ;
 ; uart_rx:rx|Rx_Data_R~0     ; 1       ;
 ; uart_rx:rx|Selector0~2     ; 1       ;
 ; uart_rx:rx|Selector0~1     ; 1       ;
 ; uart_rx:rx|Selector1~3     ; 1       ;
 ; uart_rx:rx|state~9         ; 1       ;
-; uart_rx:rx|Selector11~0    ; 1       ;
-; uart_rx:rx|state.STOP~1    ; 1       ;
 ; uart_rx:rx|state.STOP~0    ; 1       ;
+; uart_rx:rx|Selector11~0    ; 1       ;
 ; uart_rx:rx|Selector10~0    ; 1       ;
 ; uart_rx:rx|Rx_Data_R       ; 1       ;
+; uart_rx:rx|state.CLEAN     ; 1       ;
+; uart_rx:rx|clk_count[0]~21 ; 1       ;
 ; uart_rx:rx|Selector12~2    ; 1       ;
 ; uart_rx:rx|Selector12~1    ; 1       ;
 ; uart_rx:rx|Selector12~0    ; 1       ;
 ; uart_rx:rx|Selector0~0     ; 1       ;
 ; uart_rx:rx|Selector1~2     ; 1       ;
-; uart_rx:rx|state.CLEAN     ; 1       ;
-; uart_rx:rx|clk_count[0]~17 ; 1       ;
-; uart_rx:rx|Selector2~2     ; 1       ;
+; uart_rx:rx|Selector2~1     ; 1       ;
+; uart_tx:tx|Selector2~2     ; 1       ;
+; uart_tx:tx|Selector2~1     ; 1       ;
+; uart_tx:tx|Selector2~0     ; 1       ;
+; uart_tx:tx|Selector1~1     ; 1       ;
+; uart_tx:tx|Selector1~0     ; 1       ;
+; uart_tx:tx|Selector0~3     ; 1       ;
+; uart_tx:tx|Selector0~2     ; 1       ;
+; uart_tx:tx|Selector0~1     ; 1       ;
+; uart_tx:tx|Selector0~0     ; 1       ;
+; uart_tx:tx|Selector11~1    ; 1       ;
+; uart_tx:tx|state.STOP~3    ; 1       ;
+; uart_tx:tx|state.STOP~2    ; 1       ;
+; uart_tx:tx|state.STOP~0    ; 1       ;
+; uart_tx:tx|Selector12~2    ; 1       ;
+; uart_tx:tx|Selector12~1    ; 1       ;
+; uart_tx:tx|Selector12~0    ; 1       ;
 ; uart_rx:rx|buffer[7]~7     ; 1       ;
-; uart_rx:rx|Decoder0~11     ; 1       ;
 ; uart_rx:rx|buffer[6]~6     ; 1       ;
-; uart_rx:rx|Decoder0~10     ; 1       ;
-; uart_rx:rx|buffer[5]~5     ; 1       ;
 ; uart_rx:rx|Decoder0~8      ; 1       ;
-; uart_rx:rx|buffer[4]~4     ; 1       ;
+; uart_rx:rx|buffer[5]~5     ; 1       ;
 ; uart_rx:rx|Decoder0~7      ; 1       ;
+; uart_rx:rx|buffer[4]~4     ; 1       ;
+; uart_rx:rx|Decoder0~6      ; 1       ;
 ; uart_rx:rx|buffer[3]~3     ; 1       ;
 ; uart_rx:rx|Decoder0~5      ; 1       ;
 ; uart_rx:rx|buffer[2]~2     ; 1       ;
 ; uart_rx:rx|Decoder0~4      ; 1       ;
 ; uart_rx:rx|buffer[1]~1     ; 1       ;
-; uart_rx:rx|Decoder0~2      ; 1       ;
+; uart_rx:rx|Decoder0~3      ; 1       ;
 ; uart_rx:rx|buffer[0]~0     ; 1       ;
-; uart_rx:rx|Decoder0~1      ; 1       ;
-; uart_rx:rx|clk_count[6]~22 ; 1       ;
-; uart_rx:rx|clk_count[5]~21 ; 1       ;
-; uart_rx:rx|clk_count[5]~20 ; 1       ;
+; uart_rx:rx|Decoder0~2      ; 1       ;
+; uart_rx:rx|Decoder0~0      ; 1       ;
+; uart_tx:tx|Selector10~3    ; 1       ;
+; uart_tx:tx|Selector10~2    ; 1       ;
+; uart_tx:tx|Mux0~3          ; 1       ;
+; uart_tx:tx|Mux0~2          ; 1       ;
+; uart_tx:tx|Mux0~1          ; 1       ;
+; uart_tx:tx|Mux0~0          ; 1       ;
+; uart_tx:tx|Selector10~1    ; 1       ;
+; uart_tx:tx|Selector10~0    ; 1       ;
+; uart_tx:tx|Selector11~0    ; 1       ;
+; uart_rx:rx|clk_count[6]~19 ; 1       ;
+; uart_rx:rx|clk_count[5]~18 ; 1       ;
+; uart_rx:rx|clk_count[5]~17 ; 1       ;
 ; uart_rx:rx|clk_count[4]~16 ; 1       ;
 ; uart_rx:rx|clk_count[4]~15 ; 1       ;
 ; uart_rx:rx|clk_count[3]~14 ; 1       ;
@@ -1702,6 +1803,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart_rx:rx|clk_count[1]~9  ; 1       ;
 ; uart_rx:rx|clk_count[0]~8  ; 1       ;
 ; uart_rx:rx|clk_count[0]~7  ; 1       ;
+; uart_tx:tx|clk_count[6]~20 ; 1       ;
+; uart_tx:tx|clk_count[5]~19 ; 1       ;
+; uart_tx:tx|clk_count[5]~18 ; 1       ;
+; uart_tx:tx|clk_count[4]~17 ; 1       ;
+; uart_tx:tx|clk_count[4]~16 ; 1       ;
+; uart_tx:tx|clk_count[3]~15 ; 1       ;
+; uart_tx:tx|clk_count[3]~14 ; 1       ;
+; uart_tx:tx|clk_count[2]~13 ; 1       ;
+; uart_tx:tx|clk_count[2]~12 ; 1       ;
+; uart_tx:tx|clk_count[1]~10 ; 1       ;
+; uart_tx:tx|clk_count[1]~9  ; 1       ;
+; uart_tx:tx|clk_count[0]~8  ; 1       ;
+; uart_tx:tx|clk_count[0]~7  ; 1       ;
+; uart_tx:tx|clk_count[0]    ; 1       ;
 +----------------------------+---------+
 
 
@@ -1710,67 +1825,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 37 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 1 / 3,315 ( < 1 % )   ;
-; C4 interconnects            ; 12 / 60,840 ( < 1 % ) ;
-; Direct links                ; 19 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 61 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 7 / 3,315 ( < 1 % )   ;
+; C4 interconnects            ; 22 / 60,840 ( < 1 % ) ;
+; Direct links                ; 27 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 1 / 16 ( 6 % )        ;
-; Local interconnects         ; 31 / 33,216 ( < 1 % ) ;
-; R24 interconnects           ; 3 / 3,091 ( < 1 % )   ;
-; R4 interconnects            ; 9 / 81,294 ( < 1 % )  ;
+; Local interconnects         ; 63 / 33,216 ( < 1 % ) ;
+; R24 interconnects           ; 9 / 3,091 ( < 1 % )   ;
+; R4 interconnects            ; 26 / 81,294 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +---------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 4) ;
+; Number of Logic Elements  (Average = 10.50) ; Number of LABs  (Total = 8) ;
 +---------------------------------------------+-----------------------------+
 ; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
+; 2                                           ; 2                           ;
 ; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
+; 4                                           ; 1                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 1                           ;
+; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
 ; 11                                          ; 0                           ;
 ; 12                                          ; 0                           ;
-; 13                                          ; 0                           ;
+; 13                                          ; 1                           ;
 ; 14                                          ; 0                           ;
-; 15                                          ; 2                           ;
-; 16                                          ; 1                           ;
+; 15                                          ; 1                           ;
+; 16                                          ; 3                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +------------------------------------------------------------------+
 ; LAB-wide Signals                                                 ;
 +------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 1.25) ; Number of LABs  (Total = 4) ;
+; LAB-wide Signals  (Average = 1.13) ; Number of LABs  (Total = 8) ;
 +------------------------------------+-----------------------------+
-; 1 Clock                            ; 4                           ;
+; 1 Clock                            ; 7                           ;
 ; 1 Clock enable                     ; 1                           ;
+; 1 Sync. clear                      ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +----------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 19.25) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 15.63) ; Number of LABs  (Total = 8) ;
 +----------------------------------------------+-----------------------------+
 ; 0                                            ; 0                           ;
 ; 1                                            ; 0                           ;
-; 2                                            ; 0                           ;
+; 2                                            ; 1                           ;
 ; 3                                            ; 0                           ;
-; 4                                            ; 0                           ;
+; 4                                            ; 1                           ;
 ; 5                                            ; 0                           ;
-; 6                                            ; 0                           ;
+; 6                                            ; 1                           ;
 ; 7                                            ; 0                           ;
 ; 8                                            ; 0                           ;
 ; 9                                            ; 0                           ;
-; 10                                           ; 1                           ;
+; 10                                           ; 0                           ;
 ; 11                                           ; 0                           ;
 ; 12                                           ; 0                           ;
 ; 13                                           ; 0                           ;
@@ -1782,44 +1898,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 19                                           ; 0                           ;
 ; 20                                           ; 1                           ;
 ; 21                                           ; 0                           ;
-; 22                                           ; 0                           ;
-; 23                                           ; 1                           ;
-; 24                                           ; 1                           ;
+; 22                                           ; 1                           ;
+; 23                                           ; 2                           ;
+; 24                                           ; 0                           ;
+; 25                                           ; 1                           ;
 +----------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 7.00) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 4.75) ; Number of LABs  (Total = 8) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
+; 1                                               ; 1                           ;
+; 2                                               ; 1                           ;
+; 3                                               ; 2                           ;
 ; 4                                               ; 0                           ;
 ; 5                                               ; 1                           ;
 ; 6                                               ; 0                           ;
-; 7                                               ; 1                           ;
-; 8                                               ; 2                           ;
+; 7                                               ; 2                           ;
+; 8                                               ; 0                           ;
+; 9                                               ; 0                           ;
+; 10                                              ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.75) ; Number of LABs  (Total = 4) ;
+; Number of Distinct Inputs  (Average = 6.25) ; Number of LABs  (Total = 8) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
+; 3                                           ; 1                           ;
+; 4                                           ; 2                           ;
 ; 5                                           ; 1                           ;
 ; 6                                           ; 1                           ;
-; 7                                           ; 1                           ;
-; 8                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 1                           ;
 ; 9                                           ; 1                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -2114,10 +2235,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "I2C_SDAT" is assigned to location or region, but does not exist in design
     Warning (15706): Node "IRDA_RXD" is assigned to location or region, but does not exist in design
     Warning (15706): Node "IRDA_TXD" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "KEY[3]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_BLON" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[0]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "LCD_DATA[1]" is assigned to location or region, but does not exist in design
@@ -2215,24 +2332,6 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "SRAM_OE_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SRAM_UB_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "SRAM_WE_N" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[0]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[10]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[11]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[12]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[13]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[14]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[15]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[16]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[17]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[1]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[2]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[3]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[4]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[5]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
-    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "TCK" is assigned to location or region, but does not exist in design
     Warning (15706): Node "TCS" is assigned to location or region, but does not exist in design
     Warning (15706): Node "TDI" is assigned to location or region, but does not exist in design
@@ -2293,14 +2392,15 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X55_Y0 to location X65_Y11
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X33_Y12 to location X43_Y23
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
 Info (306004): Started post-fitting delay annotation
-Warning (306006): Found 18 output pins without output pin load capacitance assignment
+Warning (306006): Found 19 output pins without output pin load capacitance assignment
+    Info (306007): Pin "Tx" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LEDR[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LEDR[1]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
     Info (306007): Pin "LEDR[2]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2326,11 +2426,11 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file D:/UART/Quartus/output_files/UART.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 410 warnings
-    Info: Peak virtual memory: 5313 megabytes
-    Info: Processing ended: Thu May 16 16:12:25 2024
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 388 warnings
+    Info: Peak virtual memory: 5276 megabytes
+    Info: Processing ended: Fri May 17 11:36:47 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+

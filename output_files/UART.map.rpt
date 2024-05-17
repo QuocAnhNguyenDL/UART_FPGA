@@ -1,5 +1,5 @@
 Analysis & Synthesis report for UART
-Thu May 16 16:12:22 2024
+Fri May 17 11:36:42 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,17 +14,18 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |top_level|uart_rx:rx|state
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: my_pll:pll|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: uart_rx:rx
- 16. altpll Parameter Settings by Entity Instance
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |top_level|uart_tx:tx|state
+ 10. State Machine - |top_level|uart_rx:rx|state
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: my_pll:pll|altpll:altpll_component
+ 16. Parameter Settings for User Entity Instance: uart_rx:rx
+ 17. altpll Parameter Settings by Entity Instance
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,16 +51,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 16 16:12:21 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 17 11:36:42 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; UART                                            ;
 ; Top-level Entity Name              ; top_level                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 53                                              ;
-;     Total combinational functions  ; 52                                              ;
-;     Dedicated logic registers      ; 25                                              ;
-; Total registers                    ; 25                                              ;
-; Total pins                         ; 20                                              ;
+; Total logic elements               ; 86                                              ;
+;     Total combinational functions  ; 84                                              ;
+;     Dedicated logic registers      ; 41                                              ;
+; Total registers                    ; 41                                              ;
+; Total pins                         ; 43                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -177,6 +178,7 @@ applicable agreement for further details.
 ; my_pll.v                         ; yes             ; User Wizard-Generated File  ; D:/UART/Quartus/my_pll.v                                            ;         ;
 ; uart_rx.v                        ; yes             ; User Verilog HDL File       ; D:/UART/Quartus/uart_rx.v                                           ;         ;
 ; top_level.v                      ; yes             ; User Verilog HDL File       ; D:/UART/Quartus/top_level.v                                         ;         ;
+; uart_tx.v                        ; yes             ; User Verilog HDL File       ; D:/UART/Quartus/uart_tx.v                                           ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
 ; aglobal130.inc                   ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc    ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
@@ -190,31 +192,31 @@ applicable agreement for further details.
 +---------------------------------------------+------------------------------------------+
 ; Resource                                    ; Usage                                    ;
 +---------------------------------------------+------------------------------------------+
-; Estimated Total logic elements              ; 53                                       ;
+; Estimated Total logic elements              ; 86                                       ;
 ;                                             ;                                          ;
-; Total combinational functions               ; 52                                       ;
+; Total combinational functions               ; 84                                       ;
 ; Logic element usage by number of LUT inputs ;                                          ;
-;     -- 4 input functions                    ; 31                                       ;
-;     -- 3 input functions                    ; 12                                       ;
-;     -- <=2 input functions                  ; 9                                        ;
+;     -- 4 input functions                    ; 45                                       ;
+;     -- 3 input functions                    ; 19                                       ;
+;     -- <=2 input functions                  ; 20                                       ;
 ;                                             ;                                          ;
 ; Logic elements by mode                      ;                                          ;
-;     -- normal mode                          ; 46                                       ;
-;     -- arithmetic mode                      ; 6                                        ;
+;     -- normal mode                          ; 72                                       ;
+;     -- arithmetic mode                      ; 12                                       ;
 ;                                             ;                                          ;
-; Total registers                             ; 25                                       ;
-;     -- Dedicated logic registers            ; 25                                       ;
+; Total registers                             ; 41                                       ;
+;     -- Dedicated logic registers            ; 41                                       ;
 ;     -- I/O registers                        ; 0                                        ;
 ;                                             ;                                          ;
-; I/O pins                                    ; 20                                       ;
+; I/O pins                                    ; 43                                       ;
 ; Embedded Multiplier 9-bit elements          ; 0                                        ;
 ; Total PLLs                                  ; 1                                        ;
 ;     -- PLLs                                 ; 1                                        ;
 ;                                             ;                                          ;
 ; Maximum fan-out node                        ; my_pll:pll|altpll:altpll_component|_clk0 ;
-; Maximum fan-out                             ; 25                                       ;
-; Total fan-out                               ; 250                                      ;
-; Average fan-out                             ; 2.55                                     ;
+; Maximum fan-out                             ; 41                                       ;
+; Total fan-out                               ; 394                                      ;
+; Average fan-out                             ; 2.33                                     ;
 +---------------------------------------------+------------------------------------------+
 
 
@@ -223,10 +225,11 @@ applicable agreement for further details.
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
-; |top_level                      ; 52 (0)            ; 25 (0)       ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |top_level                                    ; work         ;
+; |top_level                      ; 84 (0)            ; 41 (0)       ; 0           ; 0            ; 0       ; 0         ; 43   ; 0            ; |top_level                                    ; work         ;
 ;    |my_pll:pll|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|my_pll:pll                         ; work         ;
 ;       |altpll:altpll_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|my_pll:pll|altpll:altpll_component ; work         ;
-;    |uart_rx:rx|                 ; 52 (52)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|uart_rx:rx                         ; work         ;
+;    |uart_rx:rx|                 ; 47 (47)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|uart_rx:rx                         ; work         ;
+;    |uart_tx:tx|                 ; 37 (37)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|uart_tx:tx                         ; work         ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -238,6 +241,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-----------------------+--------------------------+
 ; Altera ; ALTPLL       ; N/A     ; N/A          ; N/A          ; |top_level|my_pll:pll ; D:/UART/Quartus/my_pll.v ;
 +--------+--------------+---------+--------------+--------------+-----------------------+--------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------+
+; State Machine - |top_level|uart_tx:tx|state                        ;
++--------------+--------------+-----------+-------------+------------+
+; Name         ; state.T_DATA ; state.000 ; state.CLEAN ; state.STOP ;
++--------------+--------------+-----------+-------------+------------+
+; state.000    ; 0            ; 0         ; 0           ; 0          ;
+; state.T_DATA ; 1            ; 1         ; 0           ; 0          ;
+; state.STOP   ; 0            ; 1         ; 0           ; 1          ;
+; state.CLEAN  ; 0            ; 1         ; 1           ; 0          ;
++--------------+--------------+-----------+-------------+------------+
 
 
 Encoding Type:  One-Hot
@@ -259,9 +275,10 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
+; uart_tx:tx|state~3                    ; Lost fanout        ;
 ; uart_rx:rx|state~2                    ; Lost fanout        ;
 ; uart_rx:rx|state~3                    ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
+; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -270,12 +287,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
-; Number of registers using Synchronous Clear  ; 7     ;
+; Total registers                              ; 41    ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 7     ;
+; Number of registers using Clock Enable       ; 14    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -285,9 +302,10 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
+; uart_tx:tx|Tx_Data                     ; 2       ;
 ; uart_rx:rx|Rx_Data                     ; 12      ;
 ; uart_rx:rx|Rx_Data_R                   ; 1       ;
-; Total number of inverted registers = 2 ;         ;
+; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
@@ -296,7 +314,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top_level|uart_tx:tx|clk_count[6] ;
 ; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |top_level|uart_rx:rx|clk_count[0] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|uart_tx:tx|bit_index    ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_level|uart_rx:rx|bit_index    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
@@ -717,7 +737,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 16 16:12:21 2024
+    Info: Processing started: Fri May 17 11:36:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off UART -c UART
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file my_pll.v
@@ -726,8 +746,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file uart_rx
     Info (12023): Found entity 1: uart_rx
 Info (12021): Found 1 design units, including 1 entities, in source file top_level.v
     Info (12023): Found entity 1: top_level
+Info (12021): Found 1 design units, including 1 entities, in source file uart_tx.v
+    Info (12023): Found entity 1: uart_tx
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Warning (10034): Output port "LEDR[16..8]" at top_level.v(7) has no driver
+Warning (10034): Output port "LEDR[17..8]" at top_level.v(7) has no driver
 Info (12128): Elaborating entity "my_pll" for hierarchy "my_pll:pll"
 Info (12128): Elaborating entity "altpll" for hierarchy "my_pll:pll|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "my_pll:pll|altpll:altpll_component"
@@ -788,6 +810,10 @@ Warning (10230): Verilog HDL assignment warning at uart_rx.v(62): truncated valu
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(71): truncated value with size 32 to match size of target (7)
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(81): truncated value with size 32 to match size of target (3)
 Warning (10230): Verilog HDL assignment warning at uart_rx.v(96): truncated value with size 32 to match size of target (7)
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:tx"
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(51): truncated value with size 32 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(61): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(77): truncated value with size 32 to match size of target (7)
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND
@@ -798,19 +824,34 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[14]" is stuck at GND
     Warning (13410): Pin "LEDR[15]" is stuck at GND
     Warning (13410): Pin "LEDR[16]" is stuck at GND
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/UART/Quartus/output_files/UART.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 74 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 53 logic cells
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 24 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 87 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4613 megabytes
-    Info: Processing ended: Thu May 16 16:12:22 2024
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4612 megabytes
+    Info: Processing ended: Fri May 17 11:36:42 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 
